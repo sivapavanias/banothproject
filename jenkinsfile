@@ -3,7 +3,7 @@ pipeline {
 
 
    tools {
-        maven= 'Maven_3_6_0'
+        maven : 'Maven_3_6_0'
     }
 
  environment {
