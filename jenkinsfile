@@ -1,9 +1,7 @@
 pipeline {
     agent any
 
-   tools {
-        maven 'maven_3_6_0'
-    }
+   
 
     environment {
         def mavenHome = tool name: 'Maven_3_6_0', type: 'maven'
