@@ -20,8 +20,8 @@ pipeline {
             steps {
                 withMaven(maven: 'maven_3_5_0') {
 
-                    bat 'mvn --version'
-                    bat 'mvn clean install'
+                    sh 'mvn --version'
+                    sh 'mvn clean install'
                 }
             }
         }
@@ -30,7 +30,7 @@ pipeline {
 
             steps {
                 withMaven(maven: 'maven_3_5_0') {
-                    bat 'mvn test'
+                    sh 'mvn test'
                 }
              }
          }
