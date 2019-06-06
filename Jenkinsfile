@@ -8,7 +8,7 @@ pipeline {
 
  environment {
         def mavenHome = tool name: 'maven_3_5_0', type: 'maven'
-        def JAVA_HOME = tool name: 'jdk-1.8', type: 'jdk'
+        def JAVA_HOME = tool name: 'jdk1.8.0_191', type: 'jdk'
     }
 
    
@@ -18,7 +18,7 @@ pipeline {
 
         stage ('Compile stage') {
             steps {
-                withMaven(maven: 'Maven_3_6_0') {
+                withMaven(maven: 'Maven_3_5_0') {
 
                     bat 'mvn --version'
                     bat 'mvn compile'
@@ -29,7 +29,7 @@ pipeline {
         stage ('Testing stage') {
 
             steps {
-                withMaven(maven: 'Maven_3_6_0') {
+                withMaven(maven: 'Maven_3_5_0') {
                     bat 'mvn test'
                 }
              }
@@ -38,7 +38,7 @@ pipeline {
         stage ('Deployment stage') {
 
                 steps {
-                withMaven(maven: 'Maven_3_6_0') {
+                withMaven(maven: 'Maven_3_5_0') {
                     bat 'mvn deploy'
                 }
              }
