@@ -21,7 +21,7 @@ pipeline {
                 withMaven(maven: 'maven_3_5_0') {
 
                     bat 'mvn --version'
-                    bat 'mvn compile'
+                    bat 'mvn clean install'
                 }
             }
         }
