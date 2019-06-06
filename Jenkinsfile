@@ -3,11 +3,11 @@ pipeline {
 
 
    tools {
-        maven 'Maven_3_6_0'
+        maven 'Maven_3_5_0'
     }
 
  environment {
-        def mavenHome = tool name: 'Maven_3_6_0', type: 'maven'
+        def mavenHome = tool name: 'Maven_3_5_0', type: 'maven'
         def JAVA_HOME = tool name: 'jdk-1.8', type: 'jdk'
     }
 
