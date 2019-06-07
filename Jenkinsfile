@@ -19,7 +19,7 @@ pipeline {
         stage ('Compile stage') {
             steps {
                 withMaven(maven: 'maven_3_5_0') {
-       bat "\"${mvnHome}\"\\bin\\mvn -B verify"
+      // bat "\"${mvnHome}\"\\bin\\mvn -B verify"
                     bat 'mvn --version'
                     bat 'mvn clean install'
                 }
