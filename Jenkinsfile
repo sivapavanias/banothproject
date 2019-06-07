@@ -34,7 +34,16 @@ pipeline {
                 }
              }
          }
+stage ('Sonar Analysis') {
 
+            steps {
+			withSonarQubeEnv {
+   /home/jenkins/tools/hudson.plugins.sonar.SonarRunnerInstallation/sonarqubescanner/bin/sonar-scanner -Dsonar.host.url=http://localhost:9000 -Dsonar.projectName=june-6th-2k19 -Dsonar.projectVersion=1.0 -Dsonar.projectKey=meanstack:app -Dsonar.sources=. -Dsonar.projectBaseDir=C:\Program Files (x86)\Jenkins\workspace\june-6th-2k19\src\main
+}
+
+                
+             }
+         }
         stage ('Deployment stage') {
 
                 steps {
