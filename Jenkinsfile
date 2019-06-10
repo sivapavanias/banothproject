@@ -54,3 +54,4 @@ bat 'mvn package -DskipTests -U sonar:sonar -Dsonar.branch.name=master -Dsonar.h
          }
     }
 }
+}
